@@ -111,6 +111,7 @@ le déplacer dans votre module model de maven.*
 - Lisibilité : code clair, séparation des responsabilités, messages compréhensibles.
 
 ## Exemple d'affichage
+
 Voici une voiture avec un spoiler aérodynamique, des néons disco, des jantes performance et un pot d'échappement sport :
 
 ```
@@ -127,7 +128,7 @@ Voici une voiture avec un spoiler aérodynamique, des néons disco, des jantes p
 | Néons Disco Clignotants
 | Jantes Performance
 | Pot d'Échappement Sport
-
-Il est possible de changer les réglages mécaniques à tout moment.
-Il est également possible d'ajouter de nouveaux éléments de tuning.
 ```
+
+Il est possible de changer les réglages mécaniques à tout moment.  
+Il est également possible d'ajouter de nouveaux éléments de tuning.
