@@ -3,19 +3,13 @@
          xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.jad</groupId>
+        <artifactId>JackyTouch</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
 
-    <groupId>com.jad</groupId>
-    <artifactId>JackyTouch</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <packaging>pom</packaging>
-
-    <modules>
-        <module>controller</module>
-        <module>view</module>
-        <module>model</module>
-        <module>share</module>
-        <module>main</module>
-    </modules>
+    <artifactId>model</artifactId>
 
     <properties>
         <maven.compiler.source>23</maven.compiler.source>
@@ -24,10 +18,10 @@
     </properties>
     <dependencies>
         <dependency>
-            <groupId>org.jetbrains</groupId>
-            <artifactId>annotations</artifactId>
-            <version>26.0.1</version>
-            <scope>compile</scope>
+            <groupId>com.jad</groupId>
+            <artifactId>share</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>provide</scope>
         </dependency>
     </dependencies>
 </project>
