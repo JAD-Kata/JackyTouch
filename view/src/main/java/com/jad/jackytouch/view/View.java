@@ -7,9 +7,9 @@ import com.jad.textwindow.TextWindow;
 import org.jetbrains.annotations.NotNull;
 
 public class View implements IView {
+    private final TextWindow window;
     private IController controller;
     private IModel model;
-    private TextWindow window;
 
     public View() {
         this.window = new TextWindow();

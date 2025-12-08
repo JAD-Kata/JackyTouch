@@ -1,8 +1,6 @@
 package com.jad.jackytouch.model;
 
-import com.jad.jackytouch.IDecoratorSpecification;
-
-public class DecoratorSpecificationSport  extends DecoratorSpecification {
+public class DecoratorSpecificationSport extends DecoratorSpecification {
     DecoratorSpecificationSport() {
         super("Sport");
     }
