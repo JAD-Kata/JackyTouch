@@ -5,7 +5,7 @@ import org.jetbrains.annotations.NotNull;
 
 class Spoiler extends AbstractCarDecorator {
 
-    static final String ASSET_NAME = "spoiler";
+    static final String ASSET_NAME = "Spoiler";
 
     Spoiler(final @NotNull ICar car) {
         super(car, Spoiler.ASSET_NAME);

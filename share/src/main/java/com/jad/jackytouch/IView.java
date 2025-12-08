@@ -6,4 +6,6 @@ public interface IView {
     void setController(final @NotNull IController controller);
 
     void setModel(final @NotNull IModel model);
+
+    void display(@NotNull String message);
 }

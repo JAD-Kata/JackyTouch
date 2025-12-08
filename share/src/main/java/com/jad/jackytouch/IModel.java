@@ -16,4 +16,6 @@ public interface IModel {
     void addRims(@NotNull ICar car);
 
     void addExhaust(@NotNull ICar car);
+
+    @NotNull IDecoratorSpecification getSpecification(final @NotNull String randomLight);
 }

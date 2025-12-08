@@ -5,7 +5,7 @@ import org.jetbrains.annotations.NotNull;
 
 class Neon extends AbstractCarDecorator {
 
-    static final String ASSET_NAME = "neon";
+    static final String ASSET_NAME = "Neon";
 
     Neon(final @NotNull ICar car) {
         super(car, Neon.ASSET_NAME);

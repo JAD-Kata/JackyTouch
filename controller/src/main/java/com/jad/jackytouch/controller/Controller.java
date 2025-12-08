@@ -21,14 +21,20 @@ public class Controller implements IController {
     @Override
     public void proceed() {
         ICar car = this.model.makeCar();
-        System.out.println(car.getDisplay());
+        this.view.display(car.getDisplay() + "\n" + car.getDescription());
         this.model.addNeon(car);
-        System.out.println(car.getDisplay());
+        this.view.display(car.getDisplay() + "\n" + car.getDescription());
         this.model.addRims(car);
-        System.out.println(car.getDisplay());
+        this.view.display(car.getDisplay() + "\n" + car.getDescription());
         this.model.addExhaust(car);
-        System.out.println(car.getDisplay());
+        this.view.display(car.getDisplay() + "\n" + car.getDescription());
         this.model.addSpoiler(car);
-        System.out.println(car.getDisplay());
+        this.view.display(car.getDisplay() + "\n" + car.getDescription());
+
+        car.changeSpecificationOfTo("Neon", this.model.getSpecification("RandomLight"));
+        car.changeSpecificationOfTo("Exhaust", this.model.getSpecification("Sport"));
+        car.changeSpecificationOfTo("Rims", this.model.getSpecification("AccelerationImproved"));
+        car.changeSpecificationOfTo("Spoiler", this.model.getSpecification("ReducedMaxSpeed"));
+        this.view.display(car.getDisplay() + "\n" + car.getDescription());
     }
 }

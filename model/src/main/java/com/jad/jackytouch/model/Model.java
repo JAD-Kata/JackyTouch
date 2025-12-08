@@ -1,12 +1,24 @@
 package com.jad.jackytouch.model;
 
-import com.jad.jackytouch.ICar;
-import com.jad.jackytouch.IController;
-import com.jad.jackytouch.IModel;
-import com.jad.jackytouch.IView;
+import com.jad.jackytouch.*;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.List;
+
 public class Model implements IModel {
+    final static List<DecoratorSpecification> SPECIFICATIONS = List.of(
+            new DecoratorSpecificationNoEffect(),
+            new DecoratorSpecificationDrag(),
+            new DecoratorSpecificationFixedLight(),
+            new DecoratorSpecificationImprovedAcceleration(),
+            new DecoratorSpecificationRandomLight(),
+            new DecoratorSpecificationReducedMaxSpeed(),
+            new DecoratorSpecificationShowOff(),
+            new DecoratorSpecificationSilent(),
+            new DecoratorSpecificationSimulatedFlashing(),
+            new DecoratorSpecificationSport(),
+            new DecoratorSpecificationStabilityIncrease()
+                                                                              );
     private IController controller;
     private IView view;
 
@@ -43,6 +55,16 @@ public class Model implements IModel {
     @Override
     public void addExhaust(final @NotNull ICar car) {
         new Exhaust(car);
+    }
+
+    @Override
+    public @NotNull IDecoratorSpecification getSpecification(final @NotNull String randomLight) {
+        for (final DecoratorSpecification specification : Model.SPECIFICATIONS) {
+            if (specification.getName().equals(randomLight)) {
+                return specification;
+            }
+        }
+        return Model.SPECIFICATIONS.getFirst();
     }
 
 }
