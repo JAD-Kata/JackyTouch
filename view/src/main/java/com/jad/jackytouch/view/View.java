@@ -1,8 +1,6 @@
 package com.jad.jackytouch.view;
 
 import com.jad.jackytouch.ICar;
-import com.jad.jackytouch.IController;
-import com.jad.jackytouch.IModel;
 import com.jad.jackytouch.IView;
 import com.jad.textwindow.TextWindow;
 import com.jad.textwindow.TextWindowSettings;
@@ -15,8 +13,6 @@ public class View implements IView {
     private static final int SCREEN_WIDTH = 100;
     private static final int WAITING_TIME = 200;
     private final TextWindow window;
-    private IController controller;
-    private IModel model;
 
     public View() {
         TextWindowSettings settings = new TextWindowSettings();
@@ -27,16 +23,6 @@ public class View implements IView {
         this.window = new TextWindow(settings);
         this.window.setTitle("Jacky Touch");
         this.window.setVisible(true);
-    }
-
-    @Override
-    public void setController(final IController controller) {
-        this.controller = controller;
-    }
-
-    @Override
-    public void setModel(final @NotNull IModel model) {
-        this.model = model;
     }
 
     @Override

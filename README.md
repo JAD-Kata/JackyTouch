@@ -46,7 +46,7 @@ le déplacer dans votre module model de maven.*
     - main : point d’entrée
     - model : gestion des données (voiture, tuning, réglages), fichiers ASCII
     - view : pilotage de l'objet TextWindow
-    - controller : gestion de la logique métier (application des tuning, réglages)
+    - controller : gestion de la logique métier (application des tunings, réglages)
     - share : classes utilitaires partagées, interfaces communes.
 
 ---

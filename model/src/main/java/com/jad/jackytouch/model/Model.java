@@ -1,6 +1,8 @@
 package com.jad.jackytouch.model;
 
-import com.jad.jackytouch.*;
+import com.jad.jackytouch.ICar;
+import com.jad.jackytouch.IDecoratorSpecification;
+import com.jad.jackytouch.IModel;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
@@ -25,18 +27,6 @@ public class Model implements IModel {
             new Rims(),
             new Exhaust()
                                                                 );
-    private IController controller;
-    private IView view;
-
-    @Override
-    public void setController(final @NotNull IController controller) {
-        this.controller = controller;
-    }
-
-    @Override
-    public void setView(final @NotNull IView view) {
-        this.view = view;
-    }
 
     @Override
     public ICar makeCar() {
