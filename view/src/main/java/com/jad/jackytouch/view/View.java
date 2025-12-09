@@ -1,5 +1,6 @@
 package com.jad.jackytouch.view;
 
+import com.jad.jackytouch.ICar;
 import com.jad.jackytouch.IController;
 import com.jad.jackytouch.IModel;
 import com.jad.jackytouch.IView;
@@ -30,5 +31,10 @@ public class View implements IView {
     @Override
     public void display(final @NotNull String message) {
         this.window.display(message);
+    }
+
+    @Override
+    public void displayCar(final ICar car) {
+        this.display(car.getDisplay() + "\n" + car.getDescription());
     }
 }

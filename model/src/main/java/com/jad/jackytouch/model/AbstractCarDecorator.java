@@ -11,6 +11,11 @@ abstract class AbstractCarDecorator implements IRealCar {
     private IRealCar decoratedCar;
     private IDecoratorSpecification specification = Model.SPECIFICATIONS.getFirst();
 
+    protected AbstractCarDecorator(final @NotNull String name) {
+        this.asciiAsset = null;
+        this.name = name;
+    }
+
     protected AbstractCarDecorator(final @NotNull ICar car, final @NotNull String name) {
         car.decorate(this);
         this.asciiAsset = AsciiAsset.get(name);
@@ -64,4 +69,6 @@ abstract class AbstractCarDecorator implements IRealCar {
     public boolean is(final @NotNull String name) {
         return this.name.equals(name);
     }
+
+    public abstract void getDecorator(final @NotNull ICar car);
 }

@@ -21,20 +21,20 @@ public class Controller implements IController {
     @Override
     public void proceed() {
         ICar car = this.model.makeCar();
-        this.view.display(car.getDisplay() + "\n" + car.getDescription());
-        this.model.addNeon(car);
-        this.view.display(car.getDisplay() + "\n" + car.getDescription());
-        this.model.addRims(car);
-        this.view.display(car.getDisplay() + "\n" + car.getDescription());
-        this.model.addExhaust(car);
-        this.view.display(car.getDisplay() + "\n" + car.getDescription());
-        this.model.addSpoiler(car);
-        this.view.display(car.getDisplay() + "\n" + car.getDescription());
+        this.view.displayCar(car);
+        this.model.addDecorator(car, "Neon");
+        this.view.displayCar(car);
+        this.model.addDecorator(car, "Rims");
+        this.view.displayCar(car);
+        this.model.addDecorator(car, "Exhaust");
+        this.view.displayCar(car);
+        this.model.addDecorator(car, "Spoiler");
+        this.view.displayCar(car);
 
         car.changeSpecificationOfTo("Neon", this.model.getSpecification("RandomLight"));
         car.changeSpecificationOfTo("Exhaust", this.model.getSpecification("Sport"));
         car.changeSpecificationOfTo("Rims", this.model.getSpecification("AccelerationImproved"));
         car.changeSpecificationOfTo("Spoiler", this.model.getSpecification("ReducedMaxSpeed"));
-        this.view.display(car.getDisplay() + "\n" + car.getDescription());
+        this.view.displayCar(car);
     }
 }

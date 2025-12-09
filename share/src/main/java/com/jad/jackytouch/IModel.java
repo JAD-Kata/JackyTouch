@@ -9,13 +9,7 @@ public interface IModel {
 
     ICar makeCar();
 
-    void addSpoiler(@NotNull ICar car);
-
-    void addNeon(@NotNull ICar car);
-
-    void addRims(@NotNull ICar car);
-
-    void addExhaust(@NotNull ICar car);
+    void addDecorator(@NotNull ICar car, @NotNull String decoratorName);
 
     @NotNull IDecoratorSpecification getSpecification(final @NotNull String randomLight);
 }

@@ -18,7 +18,13 @@ public class Model implements IModel {
             new DecoratorSpecificationSimulatedFlashing(),
             new DecoratorSpecificationSport(),
             new DecoratorSpecificationStabilityIncrease()
-                                                                              );
+                                                                      );
+    final static List<AbstractCarDecorator> DECORATORS = List.of(
+            new Spoiler(),
+            new Neon(),
+            new Rims(),
+            new Exhaust()
+                                                                );
     private IController controller;
     private IView view;
 
@@ -38,23 +44,13 @@ public class Model implements IModel {
     }
 
     @Override
-    public void addSpoiler(final @NotNull ICar car) {
-        new Spoiler(car);
-    }
-
-    @Override
-    public void addNeon(final @NotNull ICar car) {
-        new Neon(car);
-    }
-
-    @Override
-    public void addRims(final @NotNull ICar car) {
-        new Rims(car);
-    }
-
-    @Override
-    public void addExhaust(final @NotNull ICar car) {
-        new Exhaust(car);
+    public void addDecorator(final @NotNull ICar car, final @NotNull String decoratorName) {
+        for (final AbstractCarDecorator decorator : Model.DECORATORS) {
+            if (decorator.is(decoratorName)) {
+                decorator.getDecorator(car);
+                return;
+            }
+        }
     }
 
     @Override

@@ -8,4 +8,6 @@ public interface IView {
     void setModel(final @NotNull IModel model);
 
     void display(@NotNull String message);
+
+    void displayCar(ICar car);
 }
