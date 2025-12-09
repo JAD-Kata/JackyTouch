@@ -13,4 +13,6 @@ public interface ICar {
                                          final @NotNull IDecoratorSpecification specification) {
 
     }
+
+    String getNames();
 }

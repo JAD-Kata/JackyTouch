@@ -33,4 +33,9 @@ class Car implements ICar {
                                         final @NotNull IDecoratorSpecification specification) {
         this.realCar.changeSpecificationOfTo(name, specification);
     }
+
+    @Override
+    public String getNames() {
+        return this.realCar.getNames();
+    }
 }

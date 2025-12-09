@@ -26,6 +26,11 @@ abstract class AbstractBaseCar implements IRealCar {
     }
 
     @Override
+    public String getNames() {
+        return "";
+    }
+
+    @Override
     public AsciiAsset getAsciiAsset() {
         return this.asciiAsset;
     }

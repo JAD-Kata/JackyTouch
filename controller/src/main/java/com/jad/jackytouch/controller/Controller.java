@@ -32,8 +32,11 @@ public class Controller implements IController {
         this.view.displayCar(car);
 
         car.changeSpecificationOfTo("Neon", this.model.getSpecification("RandomLight"));
+        this.view.displayCar(car);
         car.changeSpecificationOfTo("Exhaust", this.model.getSpecification("Sport"));
+        this.view.displayCar(car);
         car.changeSpecificationOfTo("Rims", this.model.getSpecification("AccelerationImproved"));
+        this.view.displayCar(car);
         car.changeSpecificationOfTo("Spoiler", this.model.getSpecification("ReducedMaxSpeed"));
         this.view.displayCar(car);
     }

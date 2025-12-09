@@ -52,6 +52,13 @@ abstract class AbstractCarDecorator implements IRealCar {
     }
 
     @Override
+    public String getNames() {
+        final String subName = this.decoratedCar.getNames();
+        final String name = this.getName();
+        return (name.isEmpty() ? subName : name + (subName.isEmpty() ? "" : "\n" + subName));
+    }
+
+    @Override
     public final AsciiAsset getAsciiAsset() {
         return AsciiAsset.merge(this.decoratedCar.getAsciiAsset(), this.asciiAsset);
     }
